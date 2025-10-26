@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffe6f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.gift-box {
+    font-size: 100px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gift-box.opened {
+    transform: scale(1.2) rotate(20deg);
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0% { transform: scale(1.2) rotate(20deg); }
+    50% { transform: scale(1.5) rotate(-20deg); }
+    100% { transform: scale(1.2) rotate(20deg); }
+}
+
+.message {
+    font-size: 2em;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.message.show {
+    opacity: 1;
+}
